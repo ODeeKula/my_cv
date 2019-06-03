@@ -1,0 +1,384 @@
+$primary-color: rgb(23, 42, 67);
+$secondary-color: rgb(197, 111, 54);
+$text-color: rgb(255, 255, 255);
+$heading-color: rgb(201, 201, 201);
+$background-color: rgb(21, 21, 21);
+
+@font-face {
+  font-family: denseFont;
+  src: url(../fonts/roboto.light.ttf);
+}
+
+// Extend/Inheritance
+@mixin button($button-text-color, $button-bg-color , $border-color) {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 12px 28px;
+  color: $button-text-color;
+  border: 1px solid $border-color;
+  border-radius: 2px;
+  background-color:  $button-bg-color;
+  text-align: center;
+  cursor: pointer;
+}
+
+// Initialisation of body
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: $background-color;
+  font-family: 'Century Gothic';
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+}
+
+h1, h2, h3 {
+  font-family: 'denseFont';
+}
+
+// Hero Image
+.header {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  overflow: hidden;
+
+  h1 {
+    padding: 0;
+    font-size: 50px;
+    text-align: center;
+  }
+
+  p {
+    padding: 0;
+    margin-top: -25px;
+    text-align: center;
+  }
+
+
+}
+
+.header-text {
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding: 5px 0;
+
+  img{
+    width:50%;
+    height:40%;
+    padding-top: 10px;
+
+  }
+
+    a {
+      display: inline-block;
+
+    }
+}
+
+.header-text .primary-button{
+  @include button($text-color, $secondary-color, $secondary-color);
+}
+
+.header-text .primary-button:hover  {
+  background-color: $secondary-color;
+  color: white;
+}
+
+
+// Styling the sections
+
+.intro_content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 5px;
+  background-color: white;
+  text-align: center;
+  justify-content: center;
+
+  hr {
+    padding: 0;
+    width: 15%;
+    height: 1px;
+    background-color: $secondary-color;
+    border: none;
+  }
+
+  h2 {
+    grid-column: 1/4 ;
+    grid-row: 1/2;
+    font-size: 26px;
+    display: inline-block;
+    padding: 10px 0;
+  }
+
+  p {
+    grid-column: 1/4 ;
+    grid-row: 2/2 ;
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto;
+    line-height: -50px;
+
+
+  }
+
+  .close {
+    grid-column: 4/4;
+    grid-row: 1/3;
+
+  }
+
+}
+
+.edu_content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 5px;
+  // padding: 75px 0;
+  background-color: white;
+  text-align: center;
+  justify-content: center;
+
+  h2 {
+    grid-column: 1/3;
+    grid-row: 1/4 ;
+    font-size: 26px;
+    display: inline-block;
+    padding: 10px 0;
+  }
+
+  hr {
+    padding: 0;
+    width: 15%;
+    height: 1px;
+    background-color: $secondary-color;
+    border: none;
+  }
+
+  .close {
+    grid-column: 3/3;
+    grid-row: 1/4;
+  }
+
+}
+
+.skill_content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 5px;
+  padding: 75px 0;
+  background-color: white;
+  text-align: center;
+  justify-content: center;
+
+  h2 {
+    grid-column: 1/3 ;
+    grid-row: 1/3;
+    font-size: 26px;
+    display: inline-block;
+    padding: 10px 0;
+  }
+
+  hr {
+    padding: 0;
+    width: 15%;
+    height: 1px;
+    background-color: $secondary-color;
+    border: none;
+  }
+
+  p {
+    // padding: 10px 0;
+  }
+
+  .close{
+    grid-column: 3/3;
+    grid-row: 1/3;
+  }
+
+}
+
+.detail_content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr) ;
+  grid-gap: 5px;
+  background-color: white;
+  text-align: center;
+
+  h2 {
+    grid-column: 1/3;
+    grid-row: 1/3;
+    font-size: 26px;
+    display: inline-block;
+    padding: 10px 0;
+
+  }
+
+  hr {
+    padding: 0;
+    width: 20%;
+    height: 1px;
+    background-color: $secondary-color;
+    border: none;
+  }
+
+  p {
+    padding: 10px 0;
+    grid-template-columns: 1fr;
+    grid-template-rows:repeat(5, 1fr) ;
+    text-align: center;
+
+    #number {
+      grid-column:1/2 ;
+      grid-row: 2/6;
+    }
+    #email {
+      grid-column: 1/2 ;
+      grid-row: 3/6;
+    }
+    #googleplus {
+      grid-column: 1/2;
+      grid-row: 4/6;
+    }
+    #linkedin {
+      grid-column: 1/2;
+      grid-row: 5/6;
+    }
+    #github {
+      grid-column: 1/2;
+      grid-row: 6/6;
+    }
+
+  }
+
+  .close {
+    grid-column: 3/3;
+    grid-row: 1/3;
+  }
+
+}
+
+
+
+.ref_content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 5px;
+  // padding: 75px 0;
+  background-color: white;
+  text-align: center;
+  justify-content: center;
+
+  h2 {
+    grid-column: 1/3;
+    grid-row: 1/3;
+    font-size: 26px;
+    display: inline-block;
+    padding: 10px 0;
+  }
+
+  hr {
+    padding: 0;
+    width: 15%;
+    height: 1px;
+    background-color: $secondary-color;
+    border: none;
+  }
+
+  p {
+    // padding: 10px 0;
+  }
+
+  .close {
+    grid-column: 3/3;
+    grid-row: 1/3;
+  }
+
+}
+
+
+/**************parallax-section****************/
+.parallax-section {
+  // background-image: url('../img/hero_image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 50vh;
+}
+
+/********** Modal Section ********/
+/* The Modal (background) */
+.intro_section, .education_section, .skills_section,.details_section, .contact_section {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: -14%;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.intro_content, .edu_content, .skill_content,.detail_content, .ref_content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height: 100%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer{
+  color:white;
+  float: left;
+  font-style: italic;
+  position: sticky;
+
+
+}
+
+
+//Adding functionality for responsive design
+@import 'responsiveness';

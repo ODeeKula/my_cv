@@ -1,0 +1,626 @@
+@font-face {
+  font-family: denseFont;
+  src: url(../fonts/roboto.light.ttf);
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #151515;
+  font-family: "Century Gothic";
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+}
+
+h1, h2, h3 {
+  font-family: "denseFont";
+}
+
+.header {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  overflow: hidden;
+}
+.header h1 {
+  padding: 0;
+  font-size: 50px;
+  text-align: center;
+}
+.header p {
+  padding: 0;
+  margin-top: -25px;
+  text-align: center;
+}
+
+.header-text {
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding: 5px 0;
+}
+.header-text img {
+  width: 50%;
+  height: 40%;
+  padding-top: 10px;
+}
+.header-text a {
+  display: inline-block;
+}
+
+.header-text .primary-button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 12px 28px;
+  color: white;
+  border: 1px solid #c56f36;
+  border-radius: 2px;
+  background-color: #c56f36;
+  text-align: center;
+  cursor: pointer;
+}
+
+.header-text .primary-button:hover {
+  background-color: #c56f36;
+  color: white;
+}
+
+.intro_content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 5px;
+  background-color: white;
+  text-align: center;
+  justify-content: center;
+}
+.intro_content hr {
+  padding: 0;
+  width: 15%;
+  height: 1px;
+  background-color: #c56f36;
+  border: none;
+}
+.intro_content h2 {
+  grid-column: 1/4;
+  grid-row: 1/2;
+  font-size: 26px;
+  display: inline-block;
+  padding: 10px 0;
+}
+.intro_content p {
+  grid-column: 1/4;
+  grid-row: 2/2;
+  font-size: 20px;
+  text-align: center;
+  margin: 0 auto;
+  line-height: -50px;
+}
+.intro_content .close {
+  grid-column: 4/4;
+  grid-row: 1/3;
+}
+
+.edu_content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 5px;
+  background-color: white;
+  text-align: center;
+  justify-content: center;
+}
+.edu_content h2 {
+  grid-column: 1/3;
+  grid-row: 1/4;
+  font-size: 26px;
+  display: inline-block;
+  padding: 10px 0;
+}
+.edu_content hr {
+  padding: 0;
+  width: 15%;
+  height: 1px;
+  background-color: #c56f36;
+  border: none;
+}
+.edu_content .close {
+  grid-column: 3/3;
+  grid-row: 1/4;
+}
+
+.skill_content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 5px;
+  padding: 75px 0;
+  background-color: white;
+  text-align: center;
+  justify-content: center;
+}
+.skill_content h2 {
+  grid-column: 1/3;
+  grid-row: 1/3;
+  font-size: 26px;
+  display: inline-block;
+  padding: 10px 0;
+}
+.skill_content hr {
+  padding: 0;
+  width: 15%;
+  height: 1px;
+  background-color: #c56f36;
+  border: none;
+}
+.skill_content .close {
+  grid-column: 3/3;
+  grid-row: 1/3;
+}
+
+.detail_content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 5px;
+  background-color: white;
+  text-align: center;
+}
+.detail_content h2 {
+  grid-column: 1/3;
+  grid-row: 1/3;
+  font-size: 26px;
+  display: inline-block;
+  padding: 10px 0;
+}
+.detail_content hr {
+  padding: 0;
+  width: 20%;
+  height: 1px;
+  background-color: #c56f36;
+  border: none;
+}
+.detail_content p {
+  padding: 10px 0;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  text-align: center;
+}
+.detail_content p #number {
+  grid-column: 1/2;
+  grid-row: 2/6;
+}
+.detail_content p #email {
+  grid-column: 1/2;
+  grid-row: 3/6;
+}
+.detail_content p #googleplus {
+  grid-column: 1/2;
+  grid-row: 4/6;
+}
+.detail_content p #linkedin {
+  grid-column: 1/2;
+  grid-row: 5/6;
+}
+.detail_content p #github {
+  grid-column: 1/2;
+  grid-row: 6/6;
+}
+.detail_content .close {
+  grid-column: 3/3;
+  grid-row: 1/3;
+}
+
+.ref_content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 5px;
+  background-color: white;
+  text-align: center;
+  justify-content: center;
+}
+.ref_content h2 {
+  grid-column: 1/3;
+  grid-row: 1/3;
+  font-size: 26px;
+  display: inline-block;
+  padding: 10px 0;
+}
+.ref_content hr {
+  padding: 0;
+  width: 15%;
+  height: 1px;
+  background-color: #c56f36;
+  border: none;
+}
+.ref_content .close {
+  grid-column: 3/3;
+  grid-row: 1/3;
+}
+
+/**************parallax-section****************/
+.parallax-section {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 50vh;
+}
+
+/********** Modal Section ********/
+/* The Modal (background) */
+.intro_section, .education_section, .skills_section, .details_section, .contact_section {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: -14%;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+.intro_content, .edu_content, .skill_content, .detail_content, .ref_content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height: 100%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer {
+  color: white;
+  float: left;
+  font-style: italic;
+  position: sticky;
+}
+
+@media screen and (max-width: 1080px) {
+  .header-text {
+    top: 50%;
+    left: 50%;
+  }
+
+  .intro_content, .edu_content, .skills_content, .detail_content, .ref_content {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr;
+    background-color: white;
+    grid-column-gap: 5px;
+    padding: 50px;
+    justify-content: center;
+  }
+
+  /* Modal Content */
+  .intro_content, .edu_content, .skill_content, .detail_content, .ref_content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 100%;
+  }
+
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+  }
+}
+@media screen and (max-width: 640px) {
+  .header-text .primary-button {
+    margin: 20px;
+  }
+
+  button {
+    display: inline-block;
+  }
+
+  .header {
+    height: 150vh;
+  }
+
+  .header-text {
+    text-align: center;
+    height: 150vh;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .header-text h1 {
+    font-size: 25px;
+  }
+  .header-text p {
+    margin-top: 10px;
+  }
+  .header-text img {
+    width: 30%;
+    height: 20%;
+  }
+
+  .intro_section, .education_section, .skills_section, .details_section, .contact_section {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr;
+    background-color: white;
+    grid-column-gap: 5px;
+    padding: 5px;
+    justify-content: center;
+  }
+  .intro_section hr, .education_section hr, .skills_section hr, .details_section hr, .contact_section hr {
+    width: 15%;
+  }
+
+  /* Modal Content */
+  .intro_content, .edu_content, .skill_content, .detail_content, .ref_content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 100%;
+  }
+
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+  }
+}
+@media screen and (max-width: 320px) {
+  .topnav {
+    width: 100%;
+  }
+
+  .header {
+    height: 160vh;
+  }
+
+  .header-text .primary-button {
+    margin: 10px;
+  }
+  .header-text .primary-button h1 {
+    font-size: 25px;
+  }
+  .header-text .primary-button p {
+    margin: 10px;
+    font-size: 20px;
+  }
+  .header-text .primary-button img {
+    width: 20%;
+    height: 10%;
+  }
+
+  .header-text {
+    text-align: center;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .intro_content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 95px 0;
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+  }
+  .intro_content hr {
+    padding: 0;
+    width: 10%;
+    height: 1px;
+    background-color: #c56f36;
+    border: none;
+  }
+
+  .edu_content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    padding: 75px 0;
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+  }
+  .edu_content h2 {
+    font-size: 26px;
+    display: inline-block;
+    padding: 10px 0;
+  }
+  .edu_content hr {
+    padding: 0;
+    width: 10%;
+    height: 1px;
+    background-color: #c56f36;
+    border: none;
+  }
+  .edu_content p {
+    padding: 10px 0;
+  }
+
+  .skill_content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    padding: 75px 0;
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+  }
+  .skill_content h2 {
+    font-size: 26px;
+    display: inline-block;
+    padding: 10px 0;
+  }
+  .skill_content hr {
+    padding: 0;
+    width: 10%;
+    height: 1px;
+    background-color: #c56f36;
+    border: none;
+  }
+  .skill_content p {
+    padding: 10px 0;
+  }
+
+  .detail_content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    padding: 75px 0;
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+  }
+  .detail_content h2 {
+    font-size: 26px;
+    display: inline-block;
+    padding: 10px 0;
+  }
+  .detail_content hr {
+    padding: 0;
+    width: 10%;
+    height: 1px;
+    background-color: #c56f36;
+    border: none;
+  }
+  .detail_content p {
+    padding: 10px 0;
+  }
+  .detail_content a {
+    color: white;
+  }
+
+  .ref_content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    padding: 75px 0;
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+  }
+  .ref_content h2 {
+    font-size: 26px;
+    display: inline-block;
+    padding: 10px 0;
+  }
+  .ref_content hr {
+    padding: 0;
+    width: 10%;
+    height: 1px;
+    background-color: #c56f36;
+    border: none;
+  }
+  .ref_content p {
+    padding: 10px 0;
+  }
+
+  /* Modal Content */
+  .intro_content, .edu_content, .skill_content, .detail_content, .ref_content {
+    background-color: #fefefe;
+    margin: 0;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    height: 150%;
+  }
+
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
